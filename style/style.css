@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box;
+}
+
+:root{
+    --window-size: 100%;
+    --size: 1.5rem;
+}
+
+@media only screen and (min-width: 576px) {
+    :root{
+        --window-size: 576px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    :root{
+        --window-size: 720px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    :root{
+        --window-size: 960px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    :root{
+        --window-size: 1140px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    :root{
+        --window-size: 1400px;
+    }
+}
+.container{
+    width: var(--window-size);
+    min-width: 375px;
+    background: olive;
+    margin: auto;
+}
+.row{
+    display: flex;;
+    flex-wrap: wrap;
+}
+
+/* greeting section styles  */
+.greet{
+    width: 30%;
+    position: relative;
+}
+:where(img){
+    width: 100%;
+    /* object-fit: 100%; */
+}
+.greeting{
+    position : absolute;
+    top: 0;
+}
+
+/* main section styles */
+.main{
+    width: 70%;
+    /* padding: 1.5rem; */
+}
+
+.main > div:first-child{
+    background: rebeccapurple;
+    padding: var(--size)
+}
+.form-container{
+    background: #fff;
+    padding: var(--size);
+}
