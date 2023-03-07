@@ -7,37 +7,49 @@
 }
 body{
     font-family: var(--golos-text);
+    /* background: rgb(133, 133, 133); */
+    margin: var(--radius-1);
 }
-/* .h-space{
-    justify-content: space-between;
-} */
+.vp-full{
+    height: 100vh
+}
 :root{
     --window-size: 100%;
     --size: 1.5rem;
     --dark-olive:#596D48;
     --golos-text: 'Golos Text', sans-serif;
-    --shadow-1: rgba(0, 0, 0, 0.232) 0px 3px 8px;
+    --shadow-1: rgba(0, 0, 0, 0.295) 0px 3px 8px;
     --shadow-2:rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    --flex-max: 100%;
+    --flex-min: 100%;
+    --flex-width: 100%;
+    --hide-lg: 2rem; 
 }
 
 @media only screen and (min-width: 576px) {
     :root{
         --window-size: 100%;
+        --flex-width: 40%;
+        --new-size: 2.5rem;
     }
 }
 @media only screen and (min-width: 768px) {
     :root{
-        --window-size: 720px;
+        --hide-lg: 2rem;
+        --window-size: 100%;
     }
 }
 @media only screen and (min-width: 992px) {
     :root{
-        --window-size: 960px;
+        --window-size: 100%;
+        --flex-max: 70%;
+        --flex-min: 30%;
+        --radius-1: 1rem;
     }
 }
 @media only screen and (min-width: 1200px) {
     :root{
-        --window-size: 1140px;
+        /* --window-size: 90%; */
     }
 }
 @media only screen and (min-width: 1400px) {
@@ -46,11 +58,12 @@ body{
     }
 }
 .container{
-    min-width: 375px;
+    min-width: 350px;
     width: var(--window-size);
-    /* max-width: 1400px; */
     /* background: olive; */
     margin: auto;
+    border-radius: var(--radius-1);
+    overflow: hidden;
 }
 .row{
     display: flex;;
@@ -59,7 +72,7 @@ body{
 
 /* greeting section styles  */
 .greet{
-    width: 30%;
+    width: var(--flex-min);
     position: relative;
 }
 :where(img){
@@ -72,21 +85,25 @@ body{
 }
 .greeting{
     position : absolute;
-    top: 0;
+    top: 30%;
+    background: #6c5f5824; 
+    width: 100%;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
 }
 
 /* main section styles */
 .main{
-    width: 70%;
-    /* padding: 1.5rem; */
+    width: var(--flex-max);
+    background-color: #ffcdb4;
 }
 
 .main > div:first-child{
-    /* background: rebeccapurple; */
     padding: var(--size)
 }
 .form-container{
-    background: #fff;
+    background: #fec6ab;
     /* padding: var(--size); */
 }
 .form-container > p {
@@ -107,10 +124,11 @@ body{
     background-color: rgb(75, 99, 28);
 }
 .form-content:last-of-type{
-    padding-bottom: 2rem;;
+    padding-bottom: 2rem;
 }
-
-
+.form-content:last-of-type > div:last-child{
+    margin-top: var(--hide-lg);
+}
 
 input{
     border:1px solid  rgb(222, 222, 222);
@@ -127,12 +145,9 @@ input:focus{
     box-shadow: var(--shadow-1);
 }
 .form-content > div{
-    width: 40%;
-    margin-right: 3rem;
-}
-
-.form-content > div{
-    margin-top: 1.3rem;
+    width: var(--flex-width);
+    margin-right: var(--new-size);
+    margin-top: 1rem;
 }
 
 input:invalid :has(::after){
@@ -140,9 +155,9 @@ input:invalid :has(::after){
 }
 
 .color{
-    background: rgb(222, 222, 222);
+    background:  #ffb996;
     padding: var(--size);
-    box-shadow: var(--shadow-2);
+    /* box-shadow: var(--shadow-2); */
 }
 
 /*  */
@@ -155,7 +170,8 @@ input:invalid :has(::after){
     position : absolute;
     top: 100%;
     left: 0;
-    margin-top: 5px;;
+    margin-top: 5px;
+
 }
 input.invalid-border{
     border-color: red ;

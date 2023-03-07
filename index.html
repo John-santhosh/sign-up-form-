@@ -9,14 +9,18 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <section>
+    <section class="d-center row vp-full">
         <div class="container">
             <div class="row">
                 <div class="greet">
                     <div class="greet-img">
-                        <img src="images/halie-west-25xggax4bSA-unsplash.jpg" alt="greet image" aria-hidden="true">
+                        <picture>
+                            <source media="(min-width: 992px)" srcset="images/caleb-george-5sF6NrB1MEg-unsplash.jpg">
+                            <img src="images/max-letek-WDKjjG3UzP4-unsplash.jpg" alt="alternate img">
+                        </picture>
+                        <!-- Photo by <a href="https://unsplash.com/@seemoris?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Caleb George</a> on <a href="https://unsplash.com/photos/5sF6NrB1MEg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
                     </div>
-                    <div class="greeting">😊welcome</div>
+                    <div class="greeting"><span>😊welcome</span></div>
                 </div>
 
                 <div class="main">
@@ -27,7 +31,7 @@
 
                     <div class="form-container">
                         
-                        <form action="#">
+                        <form action="#" >
                                 <div class="color">
                                     <h3>Let's do this!</h3>
                                     <div class="">
@@ -36,7 +40,7 @@
                                                 <div>
                                                     <label for="fname">FirstName</label>
                                                 </div>
-                                                <input type="text" name="firstName" id="fname">
+                                                <input type="text" name="firstName" id="fname" required>
                                             </div>
                                             <div>
                                                 <div>
@@ -51,7 +55,7 @@
                                                 <div>
                                                     <label for="email">email</label>
                                                 </div>
-                                                <input type="email" name="email" id="email">
+                                                <input type="email" name="email" id="email" required>
                                             </div>
                                             <div>
                                                 <div>
@@ -66,13 +70,13 @@
                                                 <div>
                                                     <label for="pword">password</label>
                                                 </div>
-                                                <input class="invalid-border" type="password" name="password" id="pword"/>
+                                                <input class="invalid-border"  type="password" name="password" id="pword" required/>
                                             </div>
                                             <div>
                                                 <div>
                                                     <label for="Cpword">confirm password</label>
                                                 </div>
-                                                <input class="invalid-border" type="password" name="confirmPassword" id="Cpword">
+                                                <input class="invalid-border" type="password" name="confirmPassword" id="Cpword" required/>
                                             </div>
                                         </div>
                                     </div>
