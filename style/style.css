@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;900&family=Rampart+One&display=swap');
 *{
     padding: 0;
     margin: 0 ;
@@ -7,8 +6,9 @@
 }
 body{
     font-family: var(--golos-text);
-    /* background: rgb(133, 133, 133); */
-    margin: var(--radius-1);
+    background:var(--body);
+    /* margin: var(--radius-1) auto; */
+    min-width: 350px;
 }
 .vp-full{
     height: 100vh
@@ -16,14 +16,19 @@ body{
 :root{
     --window-size: 100%;
     --size: 1.5rem;
-    --dark-olive:#596D48;
+    --pale-blue:#395B64;
     --golos-text: 'Golos Text', sans-serif;
     --shadow-1: rgba(0, 0, 0, 0.295) 0px 3px 8px;
-    --shadow-2:rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    --shadow-2: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;;
     --flex-max: 100%;
     --flex-min: 100%;
     --flex-width: 100%;
     --hide-lg: 2rem; 
+    --body: #2C3333;
+    --main: #A5C9CA;
+    --white: #fff;
+    --form-bg: #E7F6F2;
+    --danger: red;
 }
 
 @media only screen and (min-width: 576px) {
@@ -35,7 +40,7 @@ body{
 }
 @media only screen and (min-width: 768px) {
     :root{
-        --hide-lg: 2rem;
+        --hide-lg: 1rem;
         --window-size: 100%;
     }
 }
@@ -49,7 +54,7 @@ body{
 }
 @media only screen and (min-width: 1200px) {
     :root{
-        /* --window-size: 90%; */
+        --window-size: 100%;
     }
 }
 @media only screen and (min-width: 1400px) {
@@ -60,7 +65,6 @@ body{
 .container{
     min-width: 350px;
     width: var(--window-size);
-    /* background: olive; */
     margin: auto;
     border-radius: var(--radius-1);
     overflow: hidden;
@@ -85,25 +89,31 @@ body{
 }
 .greeting{
     position : absolute;
-    top: 30%;
-    background: #6c5f5824; 
+    top: 25%;
+    background: #2626261e; 
     width: 100%;
     padding: 2.5rem;
     text-align: center;
-    color: #fff;
+    color: var(--body);
+    /* font-weight: 600; */
+    font-family: 'Rampart One', cursive;
+    font-size: var(--size)
 }
 
 /* main section styles */
 .main{
     width: var(--flex-max);
-    background-color: #ffcdb4;
+    background-color: var(--main);
 }
-
+.main >div p:first-of-type{
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
 .main > div:first-child{
     padding: var(--size)
 }
 .form-container{
-    background: #fec6ab;
+    background: var(--main);
     /* padding: var(--size); */
 }
 .form-container > p {
@@ -112,16 +122,17 @@ body{
 
 #btn{
     margin-top: 2rem;
-    background: var(--dark-olive);
+    background: var(--pale-blue);
     padding: .825rem 2rem;
     border: none;
     border-radius:.5rem;
-    color: #fff;
+    color: var(--white);
     margin-bottom: 2rem;
     margin-left: var(--size);
+    cursor: pointer;
 }
 #btn:active{
-    background-color: rgb(75, 99, 28);
+    background-color:#22363c;
 }
 .form-content:last-of-type{
     padding-bottom: 2rem;
@@ -150,14 +161,10 @@ input:focus{
     margin-top: 1rem;
 }
 
-input:invalid :has(::after){
-    content: "wrong";
-}
-
 .color{
-    background:  #ffb996;
+    background:  var(--form-bg);
     padding: var(--size);
-    /* box-shadow: var(--shadow-2); */
+    box-shadow: var(--shadow-2);
 }
 
 /*  */
@@ -165,7 +172,7 @@ input:invalid :has(::after){
     position : relative;
 }
 .error::after{
-    color: red ;
+    color: var(--danger) ;
     content: "*Passwords do not match";
     position : absolute;
     top: 100%;
@@ -174,5 +181,31 @@ input:invalid :has(::after){
 
 }
 input.invalid-border{
-    border-color: red ;
+    border-color: var(--danger) ;
+}
+
+a{
+    color: var(--pale-blue)
+}
+
+/* success message */
+.success{
+    text-align: center;
+    position: absolute;
+    background: rgba(56, 56, 56, 0.588);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    transition: all 1s ;
+}
+.success > p{
+    transition: all 1s ;
+    color:  #a7edf3;
+    padding: 2rem;
+    background: #131a20;
+    border: 1rem double #204051;
+    background-clip: padding-box;
 }
