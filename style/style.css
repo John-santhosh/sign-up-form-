@@ -14,6 +14,8 @@ body{
     height: 100vh
 }
 :root{
+    --bg-trans:  #26262678;
+    --trans-text: #ffffff;
     --window-size: 100%;
     --size: 1.5rem;
     --pale-blue:#395B64;
@@ -36,6 +38,8 @@ body{
         --window-size: 100%;
         --flex-width: 40%;
         --new-size: 2.5rem;
+        --bg-trans: #2626261e;
+        --trans-text: #2C3333;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -90,11 +94,11 @@ body{
 .greeting{
     position : absolute;
     top: 25%;
-    background: #2626261e; 
+    background: var(--bg-trans); 
     width: 100%;
     padding: 2.5rem;
     text-align: center;
-    color: var(--body);
+    color: var(--trans-text);
     /* font-weight: 600; */
     font-family: 'Rampart One', cursive;
     font-size: var(--size)
