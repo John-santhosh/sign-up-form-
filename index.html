@@ -1,103 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="sign-up form design task by odin project">
-    <link rel="shortcut icon" href="images/icons8-sign-up-16.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="sign-up form design task by odin project"
+    />
+    <link
+      rel="shortcut icon"
+      href="images/icons8-sign-up-16.png"
+      type="image/x-icon"
+    />
     <title>Create a new account</title>
-    <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
     <section class="d-center row vp-full">
-        <div class="container">
-            <div class="row">
-                <div class="greet">
-                    <div class="greet-img">
-                        <picture>
-                            <source media="(min-width: 992px)" srcset="images/desktop3.jpg">
-                            <img src="images/mobile1.jpg" alt="alternate img">
-                        </picture>
-                        <!-- Photo by <a href="https://unsplash.com/@willianjusten?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Willian Justen de Vasconcellos</a> on <a href="https://unsplash.com/photos/2JbsL1oxvZA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
-  
-                    </div>
-                    <div class="greeting"><span>😊welcome</span></div>
-                </div>
-
-                <div class="main">
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fugiat libero hic culpa ad nam voluptatum ex ipsum perferendis possimus ipsa blanditiis odit nostrum dolore voluptate nulla optio, provident sed.</p>
-                        <p><em>Become a member.</em></p>
-                    </div>
-
-                    <div class="form-container">
-                        
-                        <form action="#" >
-                                <div class="color">
-                                    <h3>Let's do this!</h3>
-                                    <div class="">
-                                        <div class="form-content row h-space">
-                                            <div>
-                                                <div>
-                                                    <label for="fname">FirstName</label>
-                                                </div>
-                                                <input type="text" name="firstName" id="fname" required>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <label for="lname">LastName</label>
-                                                </div>
-                                                <input type="text" name="lastName" id="lname">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-content row h-space">
-                                            <div >
-                                                <div>
-                                                    <label for="email">email</label>
-                                                </div>
-                                                <input type="email" name="email" id="email" required>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <label for="number">phone</label>
-                                                </div>
-                                                <input type="number" name="phoneNumber" id="number">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-content row h-space">
-                                            <div class="error ">
-                                                <div>
-                                                    <label for="pword">password</label>
-                                                </div>
-                                                <input class="invalid-border"  type="password" name="password" id="pword" required/>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <label for="Cpword">confirm password</label>
-                                                </div>
-                                                <input class="invalid-border" type="password" name="confirmPassword" id="Cpword" required/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button disabled id="btn" type="submit">Create Account</button>
-                        </form>
-
-                        <p>Already have an account? <a href="#">Log in</a></p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="greet">
+            <div class="greet-img">
+              <picture>
+                <source
+                  media="(min-width: 992px)"
+                  srcset="images/desktop3.jpg"
+                />
+                <img src="images/mobile1.jpg" alt="alternate img" />
+              </picture>
             </div>
+            <div class="greeting"><span>😊welcome</span></div>
+          </div>
+
+          <div class="main">
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam fugiat libero hic culpa ad nam voluptatum ex ipsum
+                perferendis possimus ipsa blanditiis odit nostrum dolore
+                voluptate nulla optio, provident sed.
+              </p>
+              <p><em>Become a member.</em></p>
+            </div>
+
+            <div class="form-container">
+              <form action="#" name="loginForm">
+                <div class="color">
+                  <h3>Let's do this!</h3>
+                  <div class="">
+                    <div class="form-content row h-space">
+                      <div>
+                        <div>
+                          <label for="fname">FirstName</label>
+                        </div>
+                        <input
+                          type="text"
+                          name="firstName"
+                          id="fname"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <div>
+                          <label for="lname">LastName</label>
+                        </div>
+                        <input type="text" name="lastName" id="lname" />
+                      </div>
+                    </div>
+
+                    <div class="form-content row h-space">
+                      <div>
+                        <div>
+                          <label for="email">email</label>
+                        </div>
+                        <input type="email" name="email" id="email" required />
+                      </div>
+                      <div>
+                        <div>
+                          <label for="number">phone</label>
+                        </div>
+                        <input type="number" name="phoneNumber" id="number" />
+                      </div>
+                    </div>
+
+                    <div class="form-content row h-space">
+                      <div class="error">
+                        <div>
+                          <label for="pword">password</label>
+                        </div>
+                        <input
+                          class="invalid-border"
+                          type="password"
+                          name="password"
+                          id="pword"
+                          minlength="5"
+                          maxlength="20"
+                          required
+                          placeholder="5-20 Characters"
+                        />
+                      </div>
+                      <div>
+                        <div>
+                          <label for="Cpword">confirm password</label>
+                        </div>
+                        <input
+                          class="invalid-border"
+                          type="password"
+                          name="confirmPassword"
+                          id="Cpword"
+                          min="5"
+                          maxlength="20"
+                          required
+                          placeholder="5-20 Characters"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button id="btn" type="submit">Create Account</button>
+              </form>
+
+              <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <div class="success row displayNone">
-        <p>Sign-up success!</p>
+      <p>Sign-up success!</p>
     </div>
 
-
     <script src="script/index.js"></script>
-</body>
+  </body>
 </html>
