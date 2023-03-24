@@ -9,6 +9,9 @@ body {
   background: var(--body);
   /* margin: var(--radius-1) auto; */
   min-width: 350px;
+  transition: all 1s;
+  /* overflow: hidden;
+  transform: translate(-100%); */
 }
 .vp-full {
   height: 100vh;

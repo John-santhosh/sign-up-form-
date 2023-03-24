@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style/login.css" />
+  </head>
+  <body class="flex flex-center">
+    <div class="container">
+      <form action="#" name="loginForm">
+        <div class="img-container">
+          <img src="images/login.png" alt="" />
+        </div>
+        <h3 class="form-title">Sign In</h3>
+        <!-- user name -->
+        <div class="form-group">
+          <input
+            type="text"
+            name="fullName"
+            class="form-control"
+            id="fname"
+            required
+          />
+          <label for="fname" class="form-label">Email or Phone</label>
+        </div>
+        <!-- end user name -->
+
+        <!-- passwd -->
+        <div class="form-group">
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="passwd"
+            required
+          />
+          <label for="passwd" class="form-label">Password</label>
+        </div>
+        <!-- end passwd -->
+
+        <div class="form-group">
+          <input type="checkbox" name="check" id="check" />
+          <label for="check">show password</label>
+          <div>
+            <p class="alert">Invalid Username or password!</p>
+          </div>
+        </div>
+        <div></div>
+        <div class="flex flex-center button-footer">
+          <h4>Forget password ?</h4>
+          <button>Next</button>
+        </div>
+      </form>
+    </div>
+    <script src="script/login.js"></script>
+  </body>
+</html>
